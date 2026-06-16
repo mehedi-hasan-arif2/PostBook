@@ -1,5 +1,5 @@
 // --- Live Backend Server URL Configuration ---
-const BASE_URL = " ";
+const BASE_URL = "https://postbook-0v43.onrender.com";
 
 // Toggle login/register views
 const toggleRegister = () => {

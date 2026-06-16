@@ -7,7 +7,7 @@ const User = require('./models/User');
 const Post = require('./models/Post');
 const Comment = require('./models/Comment');
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 // Database connection call
