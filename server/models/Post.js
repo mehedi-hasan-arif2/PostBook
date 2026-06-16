@@ -1,0 +1,8 @@
+const mongoose = require('mongoose');
+const postSchema = new mongoose.Schema({
+  postedUserId: { type: Number, required: true },
+  postedTime: { type: Date, default: Date.now },
+  postText: String,
+  postImageUrl: String
+});
+module.exports = mongoose.model('Post', postSchema);

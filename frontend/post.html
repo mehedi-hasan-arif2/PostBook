@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postbook</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="./postStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+     <script src="https://kit.fontawesome.com/60cfca8b6d.js" crossorigin="anonymous"></script>
+</head>
+<body onload="checkLoggedInUser(); showLoggedUsername(); fetchAllPosts();">
+
+<header class="header">
+    <h1>Hello <i class="fa-solid fa-hand-point-right"></i>
+        <span id="logged-username" onclick="changeProfileImage()"><i class="fa-solid fa-camera"></i> Username</span>
+    </h1>
+    
+    <div class="header-action-btns">
+        <button onclick="handleDeleteAccount()" class="deleteAccBtn">
+            <i class="fa-solid fa-user-xmark"></i> Delete
+        </button>
+        <button onclick="logOut()" class="logoutBtn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+        </button>
+    </div>
+</header>
+
+<main>
+    <section id="add-post-container">
+        <article>
+            <h2>Add New Post</h2>
+            <div>
+                <textarea id="newPost-text" cols="50" rows="5" placeholder="Add post text"></textarea>
+            </div>
+            <div>
+                <input type="text" id="newPost-image" placeholder="Add post Image URL"/>
+            </div>
+            <div>
+                <button onclick="handleAddNewPost()" class="addPost-btn">POST <i class="fa-solid fa-images"></i></button>
+            </div>
+        </article>
+    </section>
+     
+    <section id="post-container"></section>
+</main>
+
+    <script src="./js/utils/calculateTimeDifference.js"></script>
+    <script src="./js/fetchData.js?v=2026"></script>
+</body>
+</html>
